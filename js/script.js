@@ -18,6 +18,9 @@ const myAppTodo = new Vue({
         },
         removeItem(i){
             this.todoList.splice(i,1);
+        },
+        changeDoneStatus(i){
+            this.todoList[i].done = !this.todoList[i].done
         }
     }
 });
