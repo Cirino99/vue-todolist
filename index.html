@@ -18,17 +18,17 @@
                 <img id="logo-img" src="img/logo.png" alt="logo">
             </div>
             <div class="d-flex justify-content-center align-items-center mt-4">
-                <input type="text" class="form-control" placeholder="aggiungi un nuovo elemento" id="input-item">
-                <button class="btn btn-primary">Aggiungi</button>
+                <input type="text" class="form-control" placeholder="aggiungi un nuovo elemento" id="input-item" v-model="newItem" @keyup.enter="addItem">
+                <button class="btn btn-primary" @click="addItem">Aggiungi</button>
             </div>
             <div id="list">
-                <ul>
-                    <li v-for="(todo,i) in todoList" class="todo">
+                <ul v-if="todoList.length > 0">
+                    <li v-for="(todo,i) in todoList" class="todo" :class="todo.done === true ? 'done' : '' ">
                         {{todo.text}}
-                        <i class="fas fa-times"></i>
+                        <i class="fas fa-times" @click="removeItem(i)"></i>
                     </li>
                 </ul>
-                <h2>Non è presente alcun elemento nella Todo list</h2>
+                <h2 v-else>Non è presente alcun elemento nella Todo list</h2>
             </div>
         </div>
     </div>
