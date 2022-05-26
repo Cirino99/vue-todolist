@@ -14,17 +14,20 @@
 <body>
     <div id="app">
         <div class="container">
+            <!-- logo -->
             <div class="d-flex justify-content-center">
                 <img id="logo-img" src="img/logo.png" alt="logo">
             </div>
+            <!-- input nuovo item -->
             <div class="d-flex justify-content-center align-items-center mt-4">
                 <input type="text" class="form-control" placeholder="aggiungi un nuovo elemento" id="input-item" v-model="newItem" @keyup.enter="addItem">
                 <button class="btn btn-primary" @click="addItem">Aggiungi</button>
             </div>
+            <!-- lista -->
             <div id="list">
                 <ul v-if="todoList.length > 0">
-                    <li v-for="(todo,i) in todoList" class="todo" @click="changeDoneStatus(i)">
-                        <span :class="todo.done === true ? 'done' : '' ">{{todo.text}}</span>
+                    <li v-for="(todo,i) in todoList" class="todo">
+                        <span :class="todo.done === true ? 'done' : '' " @click="changeDoneStatus(i)">{{todo.text}}</span>
                         <i class="fas fa-times" @click="removeItem(i)"></i>
                     </li>
                 </ul>

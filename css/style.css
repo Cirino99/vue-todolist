@@ -7,6 +7,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* app */
 #app #logo-img {
     max-width: 500px;
     height: auto;
@@ -37,6 +38,9 @@ body{
     cursor: default;
     font-size: 18px;
     color: #1b1b1b;
+}
+#app #list ul .todo span {
+    width: 100%;
 }
 #app #list  .todo i {
     text-decoration: none;

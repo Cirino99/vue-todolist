@@ -10,17 +10,20 @@ const myAppTodo = new Vue({
         newItem : ''
     },
     methods : {
+        // metodo aggiunta nuovo item alla lista
         addItem(){
             if(this.newItem!==''){
                 this.todoList.push({ text : this.newItem, done : false});
                 this.newItem = '';
             }
         },
+        // metodo per rimuovere un item dalla lista
         removeItem(i){
             this.todoList.splice(i,1);
         },
+        // metodo per cambiare lo stato (done) di un elemento della lista
         changeDoneStatus(i){
-            this.todoList[i].done = !this.todoList[i].done
+            this.todoList[i].done = !this.todoList[i].done;
         }
     }
 });
