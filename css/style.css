@@ -3,3 +3,38 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+#app #logo-img {
+    max-width: 500px;
+    height: auto;
+}   
+#app #input-item {
+    width: 400px;
+    margin-right: 50px;
+}
+#app #list {
+    width: 70%;
+    min-width: 900px;
+    margin: 0 auto;
+    background-color: #f0f1f3;
+    margin-top: 40px;
+    padding: 15px;
+    border-radius: 20px;
+}
+#app .todo {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px black solid;
+    align-items: center;
+}
+#app ul {
+    padding: 0;
+}
+#app .todo i {
+    font-size: 25px;
+}
+#app .todo i:hover{
+    color: red;
+}
