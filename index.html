@@ -23,8 +23,8 @@
             </div>
             <div id="list">
                 <ul>
-                    <li class="todo">
-                        Prova elemento lista
+                    <li v-for="(todo,i) in todoList" class="todo">
+                        {{todo.text}}
                         <i class="fas fa-times"></i>
                     </li>
                 </ul>
