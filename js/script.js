@@ -12,6 +12,7 @@ const myAppTodo = new Vue({
     methods : {
         // metodo aggiunta nuovo item alla lista
         addItem(){
+            this.newItem = this.newItem.trim();
             if(this.newItem!==''){
                 this.todoList.push({ text : this.newItem, done : false});
                 this.newItem = '';
