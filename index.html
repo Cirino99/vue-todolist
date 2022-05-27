@@ -26,7 +26,7 @@
             <!-- lista -->
             <div id="list">
                 <ul v-if="todoList.length > 0">
-                    <li v-for="(todo,i) in todoList" class="todo">
+                    <li v-for="(todo,i) in todoList" class="todo" :key="i">
                         <span :class="todo.done === true ? 'done' : '' " @click="changeDoneStatus(i)">{{todo.text}}</span>
                         <i class="fas fa-times" @click="removeItem(i)"></i>
                     </li>
